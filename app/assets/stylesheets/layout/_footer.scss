@@ -1,1 +1,40 @@
-// Your footer style
+.footer {
+  color:white;
+  background-color: #441106;
+
+  .footer-logo {
+    width: 100%S;
+    vertical-align: middle;
+  }
+  .footer-bottom-content {
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .social-links {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    li a i {
+      font-size: 24px;
+      color: white;
+    }
+    li a i:hover {
+      color:blue;
+    }
+  }
+}
+// sticky footer
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.site-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

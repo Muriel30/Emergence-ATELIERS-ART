@@ -1,5 +1,28 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 80vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 20px;
+  font-weight: lighter;
+  color: #a5260a;
+  margin-bottom: 20px;
+}
+
 *{-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{margin:0;padding:0;background:#020003;}
+
 .conteneurCentral
 {
   margin:0;padding:0;
@@ -40,43 +63,13 @@ html{margin:0;padding:0;background:#020003;}
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
-.banner {
 
-  background-repeat: no-repeat;color:#020003;
-
-  font-size: 30px;
-  font-color: #222223;
-  height: 180px;
-  display: flex;
-
-  font-family: 'Droid Serif', serif;
-}
-
-.banner-home {
-  display: flex;
-  background: #FDF5E6;
-  .banner-home-title {
-    flex-basis: 950px;
-    padding: 0 40px;
-    align-self: center;
-    color: #020003;
-  }
-  .banner-carousel {
-    flex-grow: 1;
-  }
-  .banner-tagline {
-    color: #020003;
-    font-size : 25px;
-  }
-}
 
 .choix {
   position: flex;
   width: 100%;
   margin:12px;
   height:80px;
-  left: 30px;
-  -webkit-border-radius:5px;border-radius:5px;
  }
 
 .map {
@@ -134,38 +127,4 @@ margin-top: 20px;
 
 .fa-instagram {
   font-size: 50px;
-}
-
-.tabs {
- background: #E4E4E4 ;
- display: flex;
- padding: 0px 299px 0px;
-}
-
-.tabs h3 {
- font-size: 16px;
- font-weight: bold;
- margin-top: 0;
-}
-
-.tab {
- background: #20231D;
- flex: 0 0 55%;
- text-align: center;
- padding: 14px 0;
-
-}
-
-.tab.active {
- background: white;
- color: black;
- flex: 0 0 47%;
-}
-
-.last-pois {
-  padding: 30px 0 60px;
-}
-
-.last-pois-title {
-  margin-bottom: 20px;
 }
