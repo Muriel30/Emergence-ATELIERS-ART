@@ -1,7 +1,7 @@
 .tabs {
  background: white ;
  display: flex;
- height: 18vh;
+ height: 15vh;
 }
 
 .tabs h3 {
@@ -10,17 +10,16 @@
 }
 
 .tab {
- background: #441106;
+ background: #00237d;
  flex: 0 0 80%;
  text-align: center;
 }
 
 .tab.active {
- background: white;
+ background: #00237d;
  flex: 0 0 20%;
 }
 
-/* Optional class to fix the navbar on top */
 .navbar-wagon-fixed {
   position: fixed;
   left: 0px;
@@ -29,7 +28,6 @@
   width: 100%;
 }
 
-/* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
   display: flex;
   align-items: center;
@@ -38,8 +36,9 @@
 
 /* Navbar standard link */
 .navbar-wagon-link {
-  color: #A5260A;
-  background-color: #E8D6CD;
+  color: #F8F8FF;
+  background-color: #143892;
+  height: 15vh;
   flex: 0 0 10%;
   font-size: 30px;
 }

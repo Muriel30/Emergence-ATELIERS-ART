@@ -1,14 +1,58 @@
 <div class="tabs">
-<a class="tab active" href="#">
-<h4> ELAELART : Chercheurs d'Ateliers d'art</h4>
-    <%=image_tag("logo.png", height:"190")%>
-    </a>
+
   <!-- Right Navigation -->
+<div class="navbar-wagon-right hidden-xs hidden-sm">
+
+    <!-- Different navigation if login or not -->
+    <% if user_signed_in? %>
+
+      <!-- Notification -->
+      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
+        <div class="badge-container">
+          <i class="fa fa-envelope-o"></i>
+          <div class="badge badge-blue">3</div>
+        </div>
+      <% end %>
+
+      <!-- Profile picture and dropdown -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    <% else %>
+
+      <!-- Login text link -->
+      <%= link_to t(".sign_in", default: "Inscription & Connexion"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <% end %>
+
+  </div>
 
 
   <a class="tab" href="#">
-    <h3>Partagez les ambiances de vos ateliers d'art</h3>
+    <h3>PULSATILLART : Partagez les ambiances de vos ateliers d'art</h3>
   </a>
-
+<a class="tab active" href="#">
+    <%=image_tag("logo.png", height:"100vh")%>
+    </a>
 </div>
 
