@@ -1,7 +1,11 @@
+.corps {
+  padding-left : 300px;
+  padding-right : 300px;
+}
 .banner {
   color: #F8F8FF;
   text-align: center;
-  height: 80vh;
+  height: 95vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
@@ -16,7 +20,7 @@
 .banner p {
   font-size: 20px;
   font-weight: lighter;
-  color: #00237d;
+  color: white;
   margin-bottom: 20px;
 }
 
