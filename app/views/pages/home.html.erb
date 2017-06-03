@@ -4,7 +4,7 @@
   <div class="banner-content">
 
 <%=image_tag("logo épuré.png", height:"90vh")%>
-    <p>La base de références des Ateliers d'art</p>
+    <h1>La base de références des Ateliers d'art</h1>
     <a class="btn btn-primary btn-lg">Recevoir les actualités</a>
   </div>
 </div>
@@ -13,27 +13,30 @@
 <div class="choix">
 <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-   <h1><%= link_to "Espace ARTISTES", new_poi_path %></h1>
-   <h1><%= link_to "Espace ARTISANS", new_poi_path %></h1>
+   <h1><%= link_to "ARTISTES", new_poi_path %></h1>
+   <h1><%= link_to "ARTISANS", new_poi_path %></h1>
   </div>
 </div>
 
-  <div class="box size6 color2">
     <div class="banner-home">
       <div class="banner-home-title">
-        <h1>Une expérience intense, au coeur de la création</h1>
+        <h1>IMAGO est un répertoire d'ateliers optimisé pour les artistes et artisans d'art </h1>
+        <h3>Vous pouvez accéder aux photos et vidéos des ateliers et à toutes les informations concernant les portes ouvertes ou actualités et découvrir leurs productions en avant-première.
+        </h3>
+        <h3>L'expérience du partage avec l'artiste dans son atelier est un moment privilégié pour explorer l'art sous un angle inédit.
+        </h3>
 
           <p class="banner-tagline">
-          Ce répertoire d'ateliers géolocalisés est un espace de diffusion qui démocratise la découverte des studios d'artistes et d'artisans d'art en proposant une alternative complémentaire à la visite des musées.
+
           </p>
           <p class="banner-tagline">
-          Vous pouvez accéder aux photos et vidéos des ateliers et à toutes les informations concernant les visites libres, les portes ouvertes ou actualités et découvrir leurs productions en avant-première. L'expérience du partage avec l'artiste dans son atelier est un moment privilégié pour explorer l'art sous un angle inédit.</p>
+           </p>
       </div>
     </div>
-</div>
+
 
   <div class="box size6 color3">
-    <h1><%= link_to "Découvrir les ateliers géolocalisés", pois_path, class: "navbar-link" %></h1>
+    <h1><%= link_to "Découvrir les ateliers", pois_path, class: "navbar-link" %></h1>
 
   </div>
 
