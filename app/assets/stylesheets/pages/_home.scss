@@ -2,6 +2,7 @@
   padding-left : 300px;
   padding-right : 300px;
 }
+
 .banner {
   color: #F8F8FF;
   text-align: center;
@@ -26,6 +27,12 @@
 
 *{-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{margin:0;padding:0;background:#020003;}
+
+.coucou {
+  display: flex;
+  align-items: center;
+
+}
 
 .conteneurCentral
 {
@@ -69,7 +76,7 @@ html{margin:0;padding:0;background:#020003;}
  * ------------------------------------- */
 
 .navbar-wagon-right {
-background-color: #00237d;
+background-color: white;
 }
 
 .choix {
@@ -78,6 +85,46 @@ background-color: #00237d;
   margin:12px;
   height:80px;
  }
+
+ .tabs2 {
+  background: #53443F;
+  display: flex;
+  padding: 10px 10px 0 10px
+}
+.tabs2 a {
+  color: white;
+}
+.tabs2 a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.tabs2 h3 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.tabs2 p {
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+.tab2 {
+  background: #756A66;
+  flex: 0 0 25%;
+  text-align: center;
+  padding: 20px 0;
+}
+.tab:first-child2 {
+  border-radius: 10px 0 0 0;
+}
+.tab:last-child2 {
+  border-radius: 0 10px 0 0;
+}
+.tab.active2 {
+  background: white;
+  color: black;
+}
+
 
 .map {
 background-size: cover;
@@ -135,3 +182,29 @@ margin-top: 20px;
 .fa-instagram {
   font-size: 50px;
 }
+
+
+.share-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.share-link {
+  display: flex;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    color: white;
+  }
+}
+.bg-text {
+  background: #4a4a4a;
+}
+.bg-email {
+  background: #aeaeae;
+}
+
+
