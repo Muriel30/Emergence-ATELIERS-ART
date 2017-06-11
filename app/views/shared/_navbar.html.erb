@@ -1,12 +1,13 @@
 
-<div class="tabs">
-
-    <%=image_tag("logo IMAGO.png", height:"230vh")%>
-
-<div class="tab" style="background-image: url('<%= asset_path 'background-2.png' %>');>
-<a href="#" >
-<h3>IMAGO : Référencez votre atelier</h3>
-  </a>
+<div class="tabs" style="background-image: url('<%= asset_path 'background-2.png' %>');>
+<a href= "#"></a>
+<%= link_to root_path do %>
+  <%=image_tag("logo IMAGO.png", height:"230vh")%>
+<% end %>
+<div class="centre">
+<%= link_to root_path, class: "navbar-wagon-item2 navbar-wagon-link2" do %>
+<h3>IMAGO : Référencez vos ateliers </h3>
+<% end %>
 </div>
 </div>
 <!-- Right Navigation -->
@@ -18,29 +19,28 @@
       <!-- Notification -->
       <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
         <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <div class="badge badge-blue">3</div>
+
         </div>
       <% end %>
 
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "http://placehold.it/190x190", class: "avatar-dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <i class="fa fa-user"></i> <%= t(".profile", default: "Profil") %>
               <% end %>
             </li>
             <li>
               <%= link_to "#" do %>
-                <i class="fa fa-home"></i>  <%= t(".profile", default: "Home") %>
+                <i class="fa fa-home"></i>  <%= t(".profile", default: "Accueil") %>
               <% end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Déconnexion") %>
               <% end %>
             </li>
           </ul>
@@ -50,7 +50,7 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Inscription"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Espace personnel"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
 

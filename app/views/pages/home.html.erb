@@ -9,24 +9,20 @@
   </div>
 </div>
 
-<div class="share-links">
+<div class="decouvertes">
 
-  <div class="share-link bg-email">
-<h1><%= link_to "ARTISTES", new_poi_path %></h1>
-  </div>
-  <div class="share-link bg-text">
-    <h1><%= link_to "ARTISANS", new_poi_path %></h1>
-  </div>
-</div>
+      <%= link_to t(".sign_in", default: "ARTISTES"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
 
+      <%= link_to t(".sign_in", default: "ARTISANS"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
+  </div>
 
 <!-- Right Navigation -->
 
 
-    <div class="banner-home">
+    <div class="banner-home" style="background-image: url('<%= asset_path 'background-2.png' %>');>
       <div class="banner-home-title">
         <h1>IMAGO est un répertoire d'ateliers optimisé pour les artistes et artisans d'art </h1>
-        <h3>Vous pouvez accéder aux photos et vidéos des ateliers et à toutes les informations concernant les portes ouvertes ou actualités et découvrir leurs productions en avant-première.
+        <h3>Vous pouvez accéder aux photos et vidéos des ateliers ainsi qu'à toutes les informations concernant les actualités et découvrir leurs productions en avant-première.
         </h3>
         <h3>L'expérience du partage avec l'artiste dans son atelier est un moment privilégié pour explorer l'art sous un angle inédit.
         </h3>
@@ -36,13 +32,8 @@
           </p>
           <p class="banner-tagline">
            </p>
-      </div>
+
     </div>
-
-
-  <div class="box size6 color3">
-    <h1><%= link_to "Découvrir les ateliers", pois_path, class: "navbar-link" %></h1>
-
-  </div>
+</div>
 
 </div>

@@ -1,6 +1,19 @@
 .corps {
-  padding-left : 300px;
-  padding-right : 300px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.decalage {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.decalage h1 {
+  text-align : center;
+}
+
+.form-actions {
+  text-align : left;
 }
 
 .banner {
@@ -13,10 +26,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  text-align : center;
 }
 .banner p {
   font-size: 20px;
@@ -24,14 +39,35 @@
   color: white;
   margin-bottom: 20px;
 }
+.banner home h1 {
+text-align: center;
+}
 
 *{-webkit-box-sizing:border-box;-ms-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{margin:0;padding:0;background:#020003;}
 
 .coucou {
   display: flex;
-  align-items: center;
+  align-items: right;
+}
 
+.decouvertes {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Navbar standard link */
+.navbar-wagon-link2 {
+  color: black;
+  background-color: white;
+  height: 13vh;
+  flex: 0 0 10%;
+  font-size: 50px;
+  padding-top: 20px;
+}
+.navbar-wagon-link2:hover {
+  color: #002fa7;
+  text-decoration: none;
 }
 
 .conteneurCentral
@@ -132,31 +168,6 @@ align-items: right;
 margin-top: 20px;
 }
 
-.fa-picture-o {
-    color: #F29918;
-    font-size: 360px;
-    margin-top: 40px;
-    position: absolute;
-}
-.fa-picture-o:hover,
-.fa-picture-o:focus {
-  transform: scale(1.2);
-  box-shadow: 0 0 65px #E4E4E4 inset, 0 0 20px #E4E4E4 inset, 0 0 15px #E4E4E4;
-}
-
-.fa-camera-retro {
-    color: #F29918;
-    font-size: 360px;
-    margin-top: 40px;
-    position: absolute;
-}
-
-.fa-camera-retro:hover,
-.fa-camera-retro:focus {
-  transform: scale(1.2);
-  box-shadow: 0 0 65px #E4E4E4 inset, 0 0 20px #E4E4E4 inset, 0 0 15px #E4E4E4;
-}
-
 .carousel-inner {
      height: 400px;
 }
@@ -166,45 +177,6 @@ margin-top: 20px;
   margin-top: 0px;
   padding-bottom: 30px;
   margin-bottom: 0px;
-}
-
-.fa-facebook {
-  font-size: 50px;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
-.fa-twitter {
-  font-size: 50px;
-  margin-right: 20px;
-}
-
-.fa-instagram {
-  font-size: 50px;
-}
-
-
-.share-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.share-link {
-  display: flex;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  border-radius: 2px;
-  cursor: pointer;
-  &:hover {
-    color: white;
-  }
-}
-.bg-text {
-  background: #4a4a4a;
-}
-.bg-email {
-  background: #aeaeae;
 }
 
 

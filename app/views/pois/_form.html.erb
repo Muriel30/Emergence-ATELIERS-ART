@@ -1,16 +1,21 @@
+<div class="decalage">
 <%= simple_form_for(@poi) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :description %>
-    <%= f.input :openings %>
-    <%= f.input :stars %>
+    <h3>
+    <%= f.input :name, :label => "Nom de l'artiste ou de l'atelier" %>
+    <%= f.input :address, :label => "Adresse (facultative)" %>
+    <%= f.input :description, :label => "Description"%>
+    <%= f.input :openings, :label => "Modalités d'ouverture" %>
     <%= f.input :photo, as: :attachinary %>
+
+    </h3>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, :label => "ENREGISTRER" %>
   </div>
 <% end %>
+
+</div>
