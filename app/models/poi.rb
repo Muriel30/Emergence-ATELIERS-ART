@@ -6,9 +6,9 @@ class Poi < ApplicationRecord
 
   has_attachment :photo
 
-  after_create :send_welcome_email
+  #after_create :send_welcome_email
 
-  private
+  #private
 
   def send_creation_confirmation_email
     PoiMailer.creation_confirmation(self).deliver_now
