@@ -1,9 +1,9 @@
-<div class="decalage" style="background-image: url('<%= asset_path 'background-2.png' %>');>
-<a href="#" >
+<div class="decalage" style="background-image: url('<%= asset_path 'background-2.png' %>');">
+
   <h1>Inscrivez votre atelier</h1>
 
   <%= render 'form', poi: @poi %>
 
-  <%= link_to 'Back', pois_path %>
+  <%= link_to 'Back', pois_path, :label => "ENREGISTRER" %>
 
 </div>

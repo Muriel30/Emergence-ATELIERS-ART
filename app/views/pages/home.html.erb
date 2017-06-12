@@ -1,33 +1,32 @@
 <div class="corps">
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,255,168,0.2) 0%, rgba(0,0,255,0.2) 40%), url('<%= asset_path 'bandeau.png' %>');">
-
-  <div class="banner-content">
-
-<%=image_tag("logo épuré.png", height:"90vh")%>
-    <h1>La base de références des Ateliers d'art</h1>
-    <a class="btn btn-primary btn-lg">Recevoir les actualités</a>
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,255,168,0.2) 0%, rgba(0,0,255,0.2) 40%), url('<%= asset_path 'bandeau.png' %>');">
+    <div class="banner-content">
+      <%=image_tag("logo épuré.png", height:"90vh")%>
+        <h1>La base de références des Ateliers d'art</h1>
+        <a class="btn btn-primary btn-lg">Recevoir les actualités</a>
+    </div>
   </div>
-</div>
 
-    <div class="banner-home" style="background-image: url('<%= asset_path 'background-2.png' %>');>
-      <div class="banner-home-title">
-        <h1>IMAGO est un répertoire d'ateliers optimisé pour les artistes et les artisans d'art </h1>
-        <h3>Vous pouvez accéder aux photos et vidéos des ateliers ainsi qu'à toutes les informations concernant les actualités et découvrir leurs productions en avant-première.
-        </h3>
-        <h3>L'expérience du partage avec l'artiste dans son atelier est un moment privilégié pour explorer l'art sous un angle inédit.
-        </h3>
+  <div class="banner-text" style="background-image: url('<%= asset_path 'background-2.png' %>');">
+
+      <h1>IMAGO est un répertoire d'ateliers optimisé pour les artistes et les artisans d'art </h1>
+      <h3>Vous pouvez accéder aux photos et vidéos des ateliers ainsi qu'à toutes les informations concernant les actualités et découvrir leurs productions en avant-première.
+      </h3>
+      <h3>L'expérience du partage avec l'artiste dans son atelier est un moment privilégié pour explorer l'art sous un angle inédit.
+      </h3>
 
   </div>
+
 <div class="decouvertes">
 
-      <%= link_to t(".sign_in", default: "ARTISTES"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
+      <%= link_to t(".sign_in", default: "ARTISTES"), new_poi_path, class: "navbar-titre" %>
 
-      <%= link_to t(".sign_in", default: "ARTISANS"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
+      <%= link_to t(".sign_in", default: "ARTISANS"), new_poi_path, class: "navbar-titre" %>
   </div>
   <div class="centre">
-<h1> Partenariats envisagés
+<h1> Ateliers partenaires
 </h1>
-<%= link_to t(".sign_in", default: "Ateliers de l'Ensba - Beaux-arts de Paris - 2017"), new_poi_path, class: "navbar-wagon-item3 navbar-wagon-link3" %>
+<%= link_to t(".sign_in", default: "Ensba - Beaux-arts de Paris - 2017"), new_poi_path, class: "partenariats" %>
 </div>
     </div>
 </div>

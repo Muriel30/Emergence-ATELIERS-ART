@@ -1,35 +1,31 @@
 
-<div class="tabs" style="background-image: url('<%= asset_path 'background-2.png' %>');>
-<a href= "#"></a>
+<div class="general" style="background-image: url('<%= asset_path 'background-2.png' %>');">
 
-<div class="decouvertes-first">
-<%= link_to root_path do %>
-  <%=image_tag("logo IMAGO.png", height:"230vh")%>
-<% end %>
-      <%= link_to t(".sign_in", default: "IMAGO"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
+  <div class="decouvertes1">
+    <%= link_to root_path do %>
+      <%=image_tag("logo IMAGO.png", height:"230vh")%>
+    <% end %>
 
-      <%= link_to t(".sign_in", default: "Référencez vos ateliers d'artistes"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
-      <%= link_to t(".sign_in", default: "et d'artisans"), new_poi_path, class: "navbar-wagon-item3 navbar-wagon-link3" %>
+    <%= link_to t(".sign_in", default: "IMAGO"), new_poi_path, class: "navbar-titre" %>
+
+    <%= link_to t(".sign_in", default: "Référencez vos ateliers d'artistes"), new_poi_path, class: "navbar-titre" %>
+
+    <%= link_to t(".sign_in", default: "et d'artisans"), new_poi_path, class: "navbar-titre-bis" %>
   </div>
-
 </div>
-<!-- Right Navigation -->
+
 <div class="coucou">
 
-    <!-- Different navigation if login or not -->
-    <% if user_signed_in? %>
-
-      <!-- Notification -->
-      <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
+  <% if user_signed_in? %>
+    <%= link_to "#", class: "navbar-titre-bis" do %>
         <div class="badge-container">
-
         </div>
-      <% end %>
+    <% end %>
 
-      <!-- Profile picture and dropdown -->
-      <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag "http://placehold.it/190x190", class: "avatar-dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+  <!-- Profile picture and dropdown -->
+    <div class="navbar-titre">
+      <div class="dropdown">
+        <%= image_tag "icon artist.png", class: "avatar-dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
@@ -53,7 +49,7 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Espace personnel"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Espace personnel"), new_user_session_path, class: "navbar-titre-ter" %>
 
     <% end %>
 

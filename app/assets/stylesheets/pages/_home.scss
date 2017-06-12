@@ -3,19 +3,6 @@
   padding-right: 300px;
 }
 
-.decalage {
-  margin-left: 300px;
-  margin-right: 300px;
-}
-
-.decalage h1 {
-  text-align : center;
-}
-
-.form-actions {
-  text-align : left;
-}
-
 .banner {
   color: #F8F8FF;
   text-align: center;
@@ -33,54 +20,27 @@
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   text-align : center;
 }
-.banner p {
-  font-size: 20px;
-  font-weight: lighter;
-  color: white;
-  margin-bottom: 20px;
-}
-.banner home h1 {
+
+.banner-text {
 text-align: center;
 }
 
-.coucou {
-  display: flex;
-  align-items: right;
+
+.decalage {
+  margin-left: 300px;
+  margin-right: 300px;
 }
 
+.decalage h1 {
+  text-align : center;
+}
+
+.form-actions {
+  text-align : left;
+}
 .decouvertes {
   display: flex;
   justify-content: space-around;
-}
-
-/* Navbar standard link */
-.navbar-wagon-link2 {
-  color: black;
-  background-color: white;
-  height: 13vh;
-  flex: 0 0 10%;
-  font-size: 50px;
-  padding-top: 20px;
-}
-.navbar-wagon-link2:hover {
-  color: #002fa7;
-  text-decoration: none;
-}
-
-.navbar-wagon-link3 {
-  color: black;
-  background-color: white;
-  height: 13vh;
-  flex: 0 0 10%;
-  font-size: 50px;
-  padding-top: 20px;
-}
-.navbar-wagon-link3:hover {
-  color: #002fa7;
-  text-decoration: none;
-}
-.navbar-wagon-right {
-background-color: white;
 }
 
 .choix {
@@ -90,56 +50,6 @@ background-color: white;
   height:80px;
  }
 
- .tabs2 {
-  background: #53443F;
-  display: flex;
-  padding: 10px 10px 0 10px
-}
-.tabs2 a {
-  color: white;
-}
-.tabs2 a:hover {
-  cursor: pointer;
-  text-decoration: none;
-  opacity: 0.8;
-}
-.tabs2 h3 {
-  font-size: 17px;
-  font-weight: bold;
-  margin-top: 0;
-}
-.tabs2 p {
-  opacity: 0.5;
-  margin-bottom: 0;
-}
-.tab2 {
-  background: #756A66;
-  flex: 0 0 25%;
-  text-align: center;
-  padding: 20px 0;
-}
-.tab:first-child2 {
-  border-radius: 10px 0 0 0;
-}
-.tab:last-child2 {
-  border-radius: 0 10px 0 0;
-}
-.tab.active2 {
-  background: white;
-  color: black;
-}
-
-
-.map {
-background-size: cover;
-align-items: right;
-margin-top: 20px;
-}
-
-.carousel-inner {
-     height: 400px;
-}
-
 .block {
   background-color: #E4E4E4;
   margin-top: 0px;
@@ -147,12 +57,23 @@ margin-top: 20px;
   margin-bottom: 0px;
 }
 
-
-.avatar-dropdown-toggle {
-  padding-left: 300px;
-
-}
 .centre {
   text-align: center;
+}
 
+.partenariats {
+  color: black;
+  background-color: white;
+  height: 8vh;
+  flex: 0 0 10%;
+  font-size: 30px;
+  padding-top: 20px;
+}
+.partenariats:hover {
+  color: #DA5548;
+  text-decoration: none;
+}
+
+.decouvertes2 {
+  display: flex;
 }

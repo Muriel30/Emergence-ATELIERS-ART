@@ -1,7 +1,5 @@
 <div class="decalage">
 <%= simple_form_for(@poi) do |f| %>
-  <%= f.error_notification %>
-
   <div class="form-inputs">
     <h3>
     <%= f.input :name, :label => "Nom de l'artiste ou de l'atelier" %>
@@ -9,13 +7,11 @@
     <%= f.input :description, :label => "Description"%>
     <%= f.input :openings, :label => "Modalités d'ouverture" %>
     <%= f.input :photo, as: :attachinary %>
-
+    <%= f.association :category %>
     </h3>
+    <div id="submit_new_poi">
+      <%= f.button :submit %>
+    </div>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, :label => "ENREGISTRER" %>
-  </div>
-<% end %>
-
 </div>
