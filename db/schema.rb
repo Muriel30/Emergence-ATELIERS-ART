@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606135318) do
+ActiveRecord::Schema.define(version: 20170612172753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 20170606135318) do
     t.integer  "stars"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+    t.index ["category_id"], name: "index_pois_on_category_id", using: :btree
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -86,4 +88,5 @@ ActiveRecord::Schema.define(version: 20170606135318) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "pois", "categories"
 end
