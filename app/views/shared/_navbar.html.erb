@@ -1,14 +1,17 @@
 
 <div class="tabs" style="background-image: url('<%= asset_path 'background-2.png' %>');>
 <a href= "#"></a>
+
+<div class="decouvertes-first">
 <%= link_to root_path do %>
   <%=image_tag("logo IMAGO.png", height:"230vh")%>
 <% end %>
-<div class="centre">
-<%= link_to root_path, class: "navbar-wagon-item2 navbar-wagon-link2" do %>
-<h3>IMAGO : Référencez vos ateliers </h3>
-<% end %>
-</div>
+      <%= link_to t(".sign_in", default: "IMAGO"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
+
+      <%= link_to t(".sign_in", default: "Référencez vos ateliers d'artistes"), new_poi_path, class: "navbar-wagon-item2 navbar-wagon-link2" %>
+      <%= link_to t(".sign_in", default: "et d'artisans"), new_poi_path, class: "navbar-wagon-item3 navbar-wagon-link3" %>
+  </div>
+
 </div>
 <!-- Right Navigation -->
 <div class="coucou">
