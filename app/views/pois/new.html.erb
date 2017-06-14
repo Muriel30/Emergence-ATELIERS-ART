@@ -2,8 +2,21 @@
 
   <h1>Inscrivez votre atelier</h1>
 
-  <%= render 'form', poi: @poi %>
-
-  <%= link_to 'Back', pois_path %>
-
+<%= simple_form_for(@poi) do |f| %>
+  <div class="form-inputs">
+    <h3>
+    <%= f.input :photo, as: :attachinary %>
+    <%= f.input :name, :label => "Nom de l'artiste ou de l'atelier" %>
+    <%= f.input :address, :label => "Adresse (facultative)" %>
+    <%= f.input :description, :label => "Description" %>
+    <%= f.input :openings, :label => "Modalités d'ouverture" %>
+    <%= f.association :category, :label => "Catégorie" %>
+    </h3>
+    <div id="submit_new_poi">
+      <%= f.button :submit, "Enregistrer" %>
+    </div>
+    <% end %>
+  </div>
 </div>
+
+<%= link_to 'Back', pois_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170612181912) do
+ActiveRecord::Schema.define(version: 20170612184623) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(version: 20170612181912) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "rating"
+    t.integer  "poi_id"
+    t.index ["poi_id"], name: "index_reviews_on_poi_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -90,4 +92,5 @@ ActiveRecord::Schema.define(version: 20170612181912) do
   end
 
   add_foreign_key "pois", "categories"
+  add_foreign_key "reviews", "pois"
 end

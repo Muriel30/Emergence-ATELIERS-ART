@@ -4,13 +4,13 @@
     <h3>
     <%= f.input :name, :label => "Nom de l'artiste ou de l'atelier" %>
     <%= f.input :address, :label => "Adresse (facultative)" %>
-    <%= f.input :description, :label => "Description"%>
+    <%= f.input :description, :label => "Description" %>
     <%= f.input :openings, :label => "Modalités d'ouverture" %>
     <%= f.input :photo, as: :attachinary %>
-    <%= f.association :category %>
+    <%= f.association :category, :label => "Catégorie" %>
     </h3>
     <div id="submit_new_poi">
-      <%= f.button :submit %>
+      <%= f.button :submit, "Enregistrer" %>
     </div>
     <% end %>
   </div>

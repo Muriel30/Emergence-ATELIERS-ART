@@ -26,7 +26,6 @@
   </div>
 </div>
 
-
 <div class="container">
   <div class="row">
     <div class="col-sm-7">
@@ -37,7 +36,7 @@
 
         <div id="reviews">
           <% if @poi.reviews.blank? %>
-            Be the first to leave a review for <%= @poi.title %>
+            Soyez le premier à laisser un commentaire pour <%= @poi.title %>
           <% else %>
             <% @poi.reviews.each do |review| %>
               <%= render 'reviews/show', review: review %>
@@ -57,25 +56,22 @@
 
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>Name:</strong>
+  <strong>Nom de l'atelier :</strong>
   <%= @poi.name %>
 </p>
 <p>
-  <strong>Address:</strong>
+  <strong>Addresse :</strong>
   <%= @poi.address %>
 </p>
 <p>
-  <strong>Description:</strong>
+  <strong>Description :</strong>
   <%= @poi.description %>
 </p>
 <p>
-  <strong>Openings:</strong>
+  <strong>Modalités d'ouverture :</strong>
   <%= @poi.openings %>
 </p>
-<p>
-  <strong>Stars:</strong>
-  <%= @poi.stars %>
-</p>
 
-<%= link_to 'Edit', edit_poi_path(@poi) %> |
-<%= link_to 'Back', pois_path %>
+
+<%# %= link_to 'Edit', edit_poi_path(@poi) %> |
+<%# <%= link_to 'Back', pois_path %>

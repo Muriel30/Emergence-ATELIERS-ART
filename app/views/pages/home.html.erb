@@ -17,16 +17,24 @@
 
   </div>
 
-<div class="decouvertes">
-
-      <%= link_to t(".sign_in", default: "ARTISTES"), new_poi_path, class: "navbar-titre" %>
-
-      <%= link_to t(".sign_in", default: "ARTISANS"), new_poi_path, class: "navbar-titre" %>
+<div class="container">
+  <div class="decouvertes">
+    <%= link_to t(".sign_in", default: "ARTISTES"), new_poi_path, class: "navbar-titre" %>
+    <%= link_to t(".sign_in", default: "ARTISANS"), new_poi_path, class: "navbar-titre" %>
   </div>
-  <div class="centre">
-<h1> Ateliers partenaires
-</h1>
-<%= link_to t(".sign_in", default: "Ensba - Beaux-arts de Paris - 2017"), new_poi_path, class: "partenariats" %>
-</div>
+  <%#=<div class="row">
+    <% @pois.each do |poi|
+    <div class="col-sm-4">
+      <%= render "pois/poi", poi: poi
     </div>
+    <% end %>
+  </div>%>
+</div>
+
+<div class="centre">
+  <h1> Ateliers partenaires
+  </h1>
+  <%= link_to t(".sign_in", default: "Ensba - Beaux-arts de Paris - 2017"), new_poi_path, class: "partenariats" %>
+</div>
+
 </div>

@@ -1,58 +1,49 @@
 class PoisController < ApplicationController
-  before_action :set_poi, only: [:show, :edit, :update, :destroy]
+  before_action :find_poi, only: [:show, :edit, :update, :destroy]
 
-  # GET /pois
-  # GET /pois.json
+
   def index
     @pois = Poi.all
   end
 
-  # GET /pois/1
-  # GET /pois/1.json
   def show
   end
 
-  # GET /pois/new
   def new
     @poi = Poi.new
   end
 
-  # GET /pois/1/edit
   def edit
   end
 
-  # POST /pois
-  # POST /pois.json
+
   def create
     @poi = Poi.new(poi_params)
 
     respond_to do |format|
       if @poi.save
-        format.html { redirect_to @poi, notice: 'Poi was successfully created.' }
-        format.json { render :show, status: :created, location: @poi }
+        redirect_to @poi, notice: 'L atelier a été correctement crée.'
+
       else
-        format.html { render :new }
-        format.json { render json: @poi.errors, status: :unprocessable_entity }
+        render :new
+
       end
     end
   end
 
-  # PATCH/PUT /pois/1
-  # PATCH/PUT /pois/1.json
+  #
   def update
     respond_to do |format|
       if @poi.update(poi_params)
-        format.html { redirect_to @poi, notice: 'Poi was successfully updated.' }
-        format.json { render :show, status: :ok, location: @poi }
+        redirect_to @poi, notice: 'L atelier a été mis à jour avec succès.'
+
       else
-        format.html { render :edit }
-        format.json { render json: @poi.errors, status: :unprocessable_entity }
+       render :edit
+
       end
     end
   end
 
-  # DELETE /pois/1
-  # DELETE /pois/1.json
   def destroy
     @poi.destroy
     respond_to do |format|
@@ -63,7 +54,7 @@ class PoisController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_poi
+    def find_poi
       @poi = Poi.find(params[:id])
     end
 
