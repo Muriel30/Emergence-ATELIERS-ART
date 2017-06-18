@@ -6,7 +6,9 @@
     <%= f.input :address, :label => "Adresse (facultative)" %>
     <%= f.input :description, :label => "Description" %>
     <%= f.input :openings, :label => "Modalités d'ouverture" %>
+    <div class="ecartement">
     <%= f.input :photo, as: :attachinary %>
+    </div>
     <%= f.association :category, :label => "Catégorie" %>
     </h3>
     <div id="submit_new_poi">

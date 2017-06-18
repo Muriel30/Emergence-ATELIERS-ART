@@ -1,5 +1,5 @@
 class PoisController < ApplicationController
-  before_action :find_poi, only: [:show, :edit, :update, :destroy]
+  #before_action :find_poi
 
 
   def index
@@ -7,6 +7,8 @@ class PoisController < ApplicationController
   end
 
   def show
+     @poi = Poi.find(params[:id])
+     @review = Review.new
   end
 
   def new
@@ -16,24 +18,18 @@ class PoisController < ApplicationController
   def edit
   end
 
-
-  def create
+ def create
     @poi = Poi.new(poi_params)
-
-    respond_to do |format|
-      if @poi.save
-        redirect_to @poi, notice: 'L atelier a été correctement crée.'
-
-      else
-        render :new
-
-      end
+    if @poi.save
+      redirect_to poi_path(@poi)
+    else
+      flash[:alert] = "Erreur lors de la création"
+      render :new
     end
   end
 
-  #
+
   def update
-    respond_to do |format|
       if @poi.update(poi_params)
         redirect_to @poi, notice: 'L atelier a été mis à jour avec succès.'
 
@@ -42,21 +38,19 @@ class PoisController < ApplicationController
 
       end
     end
-  end
 
   def destroy
     @poi.destroy
-    respond_to do |format|
-      format.html { redirect_to pois_url, notice: 'Poi was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+
+    redirect_to pois_url, notice: 'Poi was successfully destroyed.'
+
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def find_poi
-      @poi = Poi.find(params[:id])
-    end
+ #def find_poi
+    #@poi = Poi.find(params[:id])
+  #end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poi_params
