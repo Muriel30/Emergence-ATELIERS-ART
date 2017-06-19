@@ -6,9 +6,6 @@ class Poi < ApplicationRecord
 
   has_attachment :photo
 
-  def title
-    "Le titre"
-  end
 
   #after_create :send_welcome_email
 

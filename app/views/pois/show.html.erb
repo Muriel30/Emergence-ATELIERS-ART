@@ -36,7 +36,7 @@
 
         <div id="reviews">
           <% if @poi.reviews.blank? %>
-            Soyez le premier à laisser un commentaire pour <%= @poi.title %>
+            Soyez le premier à laisser un commentaire pour <%= @poi.name %>
           <% else %>
             <% @poi.reviews.each do |review| %>
               <%= render 'reviews/show', review: review %>
