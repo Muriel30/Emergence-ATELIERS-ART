@@ -6,7 +6,7 @@ categories = [
   "photographie",
   "sculpture",
   "vidéo",
-  "installations",
+  "installation",
   "performance",
   "arts numériques",
   "land art",
