@@ -1,5 +1,6 @@
 <div class="decalage">
 <%= simple_form_for(@poi) do |f| %>
+
   <div class="form-inputs">
     <h3>
     <%= f.input :name, :label => "Nom de l'artiste ou de l'atelier" %>
@@ -14,6 +15,6 @@
     <div id="submit_new_poi">
       <%= f.button :submit, "Enregistrer" %>
     </div>
-    <% end %>
   </div>
+<% end %>
 </div>

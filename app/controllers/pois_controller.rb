@@ -47,12 +47,12 @@ class PoisController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
  #def find_poi
     #@poi = Poi.find(params[:id])
   #end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+
     def poi_params
       params.require(:poi).permit(:name, :address, :description, :openings, :stars, :category_id, :photo)
     end

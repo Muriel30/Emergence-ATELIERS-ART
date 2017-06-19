@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dnbss8l6h
+  api_key: '191912518794684'
+  api_secret: hCzPAvoZieZm4kZJr1ePKgQtvmo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dnbss8l6h
+  api_key: '191912518794684'
+  api_secret: hCzPAvoZieZm4kZJr1ePKgQtvmo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dnbss8l6h
+  api_key: '191912518794684'
+  api_secret: hCzPAvoZieZm4kZJr1ePKgQtvmo
+  enhance_image_tag: true
+  static_image_support: false

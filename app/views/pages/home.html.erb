@@ -14,13 +14,12 @@
       </h3>
       <h3>L'expérience du partage avec l'artiste dans son atelier est un moment privilégié pour explorer l'art sous un angle inédit.
       </h3>
-
   </div>
 
 <div class="container">
   <div class="decouvertes">
-    <%= link_to t(".sign_in", default: "ARTISTES"), new_poi_path, class: "navbar-titre" %>
-    <%= link_to t(".sign_in", default: "ARTISANS"), new_poi_path, class: "navbar-titre" %>
+    <%= link_to t(".sign_in", default: "ARTISTES"), pois_path, class: "navbar-titre" %>
+    <%= link_to t(".sign_in", default: "ARTISANS"), pois_path, class: "navbar-titre" %>
   </div>
   <%#=<div class="row">
     <% @pois.each do |poi|
