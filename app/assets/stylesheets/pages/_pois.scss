@@ -1,5 +1,5 @@
-body.pois-index {
-  height: 100vh;
+.pois-index {
+  height: 800vh;
 
   .footer {
     display: none;
@@ -14,11 +14,9 @@ body.pois-index {
     flex: 1;
     overflow-x: scroll;
     padding: 15px;
+    height: 800px;
     .card {
       margin: 15px 0;
     }
-  }
-  .pois-map {
-    width: 380px;
   }
 }

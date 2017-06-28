@@ -1,46 +1,43 @@
 <div class="decalage">
-<h1>Les ateliers d'artistes</h1>
-
-
-<div class="subtitle">
-  <ul class="filters list-inline">
-    <li data-filter="all" class="label label-default"> Tous </li>
-    <% Category.all.each do |category| %>
-      <li data-filter="<%= category.id %>" class="label label-default"> <%= category.name.capitalize %> </li>
-    <% end %>
-  </ul>
-</div>
-
-<div class="pois">
-
-  <div class="pois-list">
-    <div class="container-fluid">
-      <div class="filtr-container row">
-        <% @pois.each do |poi| %>
-          <div class="filtr-item col-sm-4" data-category="<%= poi.category.id %>" data-sort="value">
-            <%= render "poi", poi: poi %>
-          </div>
+  <h1>Les ateliers d'artistes</h1>
+    <div class="subtitle">
+      <ul class="filters list-inline">
+        <li data-filter="all" class="label label-default"> Tous </li>
+          <% Category.all.each do |category| %>
+         <li data-filter="<%= category.id %>" class="label label-default"> <%= category.name.capitalize %> </li>
         <% end %>
+      </ul>
+    </div>
+
+    <div class="pois">
+      <div class="pois-list">
+        <%#= <div class="container-fluid">
+          <div class="filtr-container row">-%>
+            <% @pois.each do |poi| %>
+              <div class="filtr-item col-sm-4" data-category="<%= poi.category.id %>" data-sort="value">
+                <%= render "poi", poi: poi %>
+              </div>
+              <% end %>
+          </div>
+        </div>
       </div>
     </div>
-</div>
 
 
 
-    <% @pois.each do |poi| %>
-      <tr>
+     <%#= @pois.each do |poi| %>
+      <%#=<tr>
         <td><%= poi.name %></td>
-        <td><%= poi.address %></td>
-        <td><%= poi.description %></td>
-        <td><%= poi.openings %></td>
-        <td><%= poi.stars %></td>
-        <td><%= link_to 'Show', poi %></td>
-        <td><%= link_to 'Edit', edit_poi_path(poi) %></td>
-        <td><%= link_to 'Destroy', poi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+        <%#=<td><%= poi.address %></td>
+        <%#=<td><%= poi.description %></td>
+        <%#=<td><%= poi.openings %></td>
+        <%#=<td><%= poi.stars %></td>
+        <%#=<td><%= link_to 'Show', poi %></td>
+        <%#=<td><%= link_to 'Edit', edit_poi_path(poi) %></td>
+        <%#=<td><%= link_to 'Destroy', poi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <%#=</tr>
+    <%#= end %>
 
-<br>
 
 <%= link_to 'Enregistrer un nouvel atelier', new_poi_path %>
 </div>
