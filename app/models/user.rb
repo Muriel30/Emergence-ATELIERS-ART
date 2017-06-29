@@ -7,7 +7,7 @@ class User < ApplicationRecord
 has_many :pois
 has_many :reviews
 
- after_create :send_welcome_email
+ #after_create :send_welcome_email
 
 def name
   email
@@ -15,7 +15,7 @@ end
 
   private
 
-  def send_welcome_email
-    UserMailer.welcome(self).deliver_now
-  end
+  #def send_welcome_email
+    #UserMailer.welcome(self).deliver_now
+  #end
 end
