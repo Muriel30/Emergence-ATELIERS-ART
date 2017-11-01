@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :studios
+
   ActiveAdmin.routes(self)
   resources :categories
 
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   resources :pois do
     resources :reviews
   end
+
   mount Attachinary::Engine => "/attachinary"
 
 end

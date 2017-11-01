@@ -1,0 +1,2 @@
+class ArtisanCategory < ApplicationRecord
+end

@@ -1,0 +1,12 @@
+<div class="card" style="background-image: url(<%= cl_image_path studio.photo.path, width: 300, height: 250, crop: :fill %>)">
+
+    <span class="card-category label label-default">
+      <%= studio.Artisan_Category.name %>
+    </span>
+
+     <div class="card-title">
+        <%= studio.name %>
+      </div>
+
+  <%= link_to "", studio_path(poi), class: "card-link" %>
+</div>

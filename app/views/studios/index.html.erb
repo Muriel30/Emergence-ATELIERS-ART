@@ -1,26 +1,25 @@
 <div class="decalage">
-  <h1>Les ateliers d'artistes</h1>
+  <h1>Les ateliers d'artisans</h1>
     <div class="subtitle">
       <ul class="filters list-inline">
         <li data-filter="all" class="label label-default"> Tous </li>
-          <% Category.all.each do |category| %>
-         <li data-filter="<%= category.id %>" class="label label-default"> <%= category.name.capitalize %> </li>
+          <% ArtisanCategory.all.each do |artisancategory| %>
+         <li data-filter="<%= artisancategory.id %>" class="label label-default"> <%= artisancategory.name.capitalize %> </li>
         <% end %>
       </ul>
     </div>
 
-    <div class="pois">
-      <div class="pois-list", background-repeat: no-repeat>
+    <div class="studios">
+      <div class="studios-list", background-repeat: no-repeat>
         <%#= <div class="container-fluid">
           <div class="filtr-container row">-%>
-            <% @pois.each do |poi| %>
-              <div class="filtr-item col-sm-4" data-category="<%= poi.category.id %>" data-sort="value">
-                <%= render "poi", poi: poi %>
+            <% @studios.each do |studio| %>
+              <div class="filtr-item col-sm-4" data-category="<%= studio.artisan_category.id %>" data-sort="value">
+                <%= render "studio", studio: studio %>
               </div>
               <% end %>
           </div>
         </div>
-
 
      <%#= @pois.each do |poi| %>
       <%#=<tr>
@@ -36,16 +35,18 @@
     <%#= end %>
 
 
-<%= link_to 'Enregistrer un nouvel atelier', new_poi_path %>
+<%= link_to 'Enregistrer un nouvel atelier', new_studio_path %>
 </div>
 
 <script>
     $(document).ready(function() {
-      var category = getParameterByName("category")
-      var filter =  category ? category : 'all'
+      var category = getParameterByName("ArtisanCategory")
+      var filter =  ArtisanCategory ? ArtisanCategory : 'all'
       var filterizd = $('.filtr-container').filterizr({
         filter: filter,
         layout: "sameSize"
       });
     });
   </script>
+
+

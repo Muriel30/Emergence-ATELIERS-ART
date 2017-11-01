@@ -2,7 +2,7 @@
   <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,255,168,0.2) 0%, rgba(0,0,255,0.2) 40%), url('<%= asset_path 'bandeau.png' %>');">
     <div class="banner-content">
       <%=image_tag("logo épuré.png", height:"90vh")%>
-        <h1>La base de références des Ateliers d'art</h1>
+        <h1>Le répertoire de référence des Ateliers d'art</h1>
         <a class="btn btn-primary btn-lg">Recevoir les actualités</a>
     </div>
   </div>
@@ -19,7 +19,7 @@
 <div class="container">
   <div class="decouvertes">
     <%= link_to t(".sign_in", default: "Liste des ARTISTES"), pois_path, class: "navbar-titre" %>
-    <%= link_to t(".sign_in", default: "Liste des ARTISANS"), pois_path, class: "navbar-titre" %>
+    <%= link_to t(".sign_in", default: "Liste des ARTISANS"), studios_path, class: "navbar-titre" %>
   </div>
   <%#=<div class="row">
     <% @pois.each do |poi|

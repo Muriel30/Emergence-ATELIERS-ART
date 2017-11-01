@@ -12,7 +12,6 @@
           <%= @poi.category.name %>
         </span>
 
-
         <div class="stars-count poi-rating">
           <% @poi.reviews.average(:rating).to_i.times do %>
             <i class="fa fa-star" aria-hidden="true" style="color: #F29918;"></i>
