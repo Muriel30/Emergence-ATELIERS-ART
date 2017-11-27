@@ -16,7 +16,7 @@ def index
   end
 
  def create
-    @studio = Studio.new(poi_params)
+    @studio = Studio.new(studio_params)
     if @studio.save
       redirect_to studio_path(@studio)
     else

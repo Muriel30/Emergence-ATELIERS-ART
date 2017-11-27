@@ -2,6 +2,8 @@
 <html>
   <head>
     <title></title>
+    <%= javascript_include_tag 'application' %>
+    <%= cloudinary_js_config %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +16,10 @@
 
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= cloudinary_js_config %>
+
+
     <%= render 'shared/footer' %>
+
+
   </body>
 </html>

@@ -2,24 +2,54 @@
   <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,255,168,0.2) 0%, rgba(0,0,255,0.2) 40%), url('<%= asset_path 'bandeau.png' %>');">
     <div class="banner-content">
       <%=image_tag("logo épuré.png", height:"90vh")%>
-        <h1>Le répertoire de référence des Ateliers d'art</h1>
-        <a class="btn btn-primary btn-lg">Recevoir les actualités</a>
+        <h1>L'annuaire de référence des Ateliers d'art</h1>
+
+        <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mailchimp{background:black; clear:left; font:14px Helvetica,Arial,sans-serif; }
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+
+<div id="mailchimp">
+<form action="https://hypotheses.us16.list-manage.com/subscribe/post?u=9bc0227af5908f45596a612b9&amp;id=b3db5b8924" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+  <h2>Recevoir les actualités d'IMAGO</h2>
+<div class="indicates-required"><span class="asterisk">*</span> Champs requis</div>
+<div class="mc-field-group">
+  <label for="mce-EMAIL">Adresse email <span class="asterisk">*</span>
+</label>
+  <input type="email" COLOR="black" value="Indiquer votre email”" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_9bc0227af5908f45596a612b9_b3db5b8924" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+
+
     </div>
   </div>
 
   <div class="banner-text" style="background-image: url('<%= asset_path 'background-2.png' %>');">
 
-      <h1>IMAGO est un répertoire d'ateliers optimisé pour les artistes et les artisans d'art </h1>
-      <h3>Vous pouvez accéder aux photos et vidéos des ateliers ainsi qu'à toutes les informations concernant les actualités et découvrir leurs productions en avant-première.
+      <h1>IMAGO est l'annuaire de référence des ateliers d'art </h1>
+      <h3>Vous pouvez accéder aux photos et vidéos des ateliers d'artistes et d'artisans ainsi qu'à toutes les informations concernant les actualités et découvrir leurs productions en avant-première.
       </h3>
-      <h3>L'expérience du partage avec l'artiste dans son atelier est un moment privilégié pour explorer l'art sous un angle inédit.
-      </h3>
+
   </div>
 
 <div class="container">
   <div class="decouvertes">
-    <%= link_to t(".sign_in", default: "Liste des ARTISTES"), pois_path, class: "navbar-titre" %>
-    <%= link_to t(".sign_in", default: "Liste des ARTISANS"), studios_path, class: "navbar-titre" %>
+    <%= link_to t(".sign_in", default: "Les ARTISTES"), pois_path, class: "navbar-titre" %>
+    <%= link_to t(".sign_in", default: "Les ARTISANS"), studios_path, class: "navbar-titre" %>
   </div>
   <%#=<div class="row">
     <% @pois.each do |poi|
@@ -30,10 +60,10 @@
   </div>
 </div>
 
-<div class="centre">
+<%#<div class="centre">
   <h1> Ateliers partenaires
   </h1>
   <%= link_to t(".sign_in", default: "Ensba - Beaux-arts de Paris - 2017"), new_poi_path, class: "partenariats" %>
 </div>
 
-</div>
+
