@@ -1,0 +1,50 @@
+<div class="decalage">
+  <h1>Les ateliers d'artistes</h1>
+    <div class="subtitle">
+      <ul class="filters list-inline">
+        <li data-filter="all" class="label label-default"> Tous </li>
+          <% Category.all.each do |category| %>
+         <li data-filter="<%= category.id %>" class="label label-default"> <%= category.name.capitalize %> </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="workshops">
+      <div class="workshops-list", background-repeat: no-repeat>
+       <div class="container-fluid">
+          <div class="filtr-container row">-%>
+            <% @workshops.each do |workshop| %>
+              <div class="filtr-item col-sm-4" data-category="<%= workshop.category.id %>" data-sort="value">
+                <%= render "workshop", workshop: workshop %>
+              </div>
+              <% end %>
+          </div>
+        </div>
+
+      <%#= @workshops.each do |poi| %>
+      <%#=<tr>
+        <td><%= workshop.name %></td>
+        <%#=<td><%= workshop.address %></td>
+        <%#=<td><%= workshop.description %></td>
+        <%#=<td><%= workshop.openings %></td>
+        <%#=<td><%= workshop.stars %></td>
+        <%#=<td><%= link_to 'Show', workshop %></td>
+        <%#=<td><%= link_to 'Edit', edit_workshop_path(workshop) %></td>
+        <%#=<td><%= link_to 'Destroy', workshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <%#=</tr>
+    <%#= end %>
+
+
+<%= link_to 'Enregistrer un nouvel atelier', new_workshop_path %>
+</div>
+
+<script>
+    $(document).ready(function() {
+      var category = getParameterByName("category")
+      var filter =  category ? category : 'all'
+      var filterizd = $('.filtr-container').filterizr({
+        filter: filter,
+        layout: "sameSize"
+      });
+    });
+  </script>

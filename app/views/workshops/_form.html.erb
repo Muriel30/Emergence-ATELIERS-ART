@@ -1,0 +1,20 @@
+<div class="decalage">
+<%= simple_form_for(@workshop) do |f| %>
+
+  <div class="form-inputs">
+    <h3>
+    <%= f.input :name, :label => "Nom de l'artiste ou de l'atelier" %>
+    <%= f.input :address, :label => "Adresse (facultative)" %>
+    <%= f.input :description, :label => "Description" %>
+    <%= f.input :openings, :label => "Modalités d'ouverture" %>
+    <div class="ecartement">
+    <%= f.input :photo, as: :attachinary %>
+    </div>
+    <%= f.association :category, :label => "Catégorie" %>
+    </h3>
+    <div id="submit_new_workshop">
+      <%= f.button :submit, "Enregistrer" %>
+    </div>
+  </div>
+<% end %>
+</div>

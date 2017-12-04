@@ -1,0 +1,12 @@
+<div class="card" style="background-image: url(<%= cl_image_path workshop.photo.path %>)">
+
+    <span class="card-category label label-default">
+      <%= workshop.category.name %>
+    </span>
+
+     <div class="card-title">
+        <%= workshop.name %>
+      </div>
+
+  <%= link_to "", workshop_path(workshop), class: "card-link" %>
+</div>

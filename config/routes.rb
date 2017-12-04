@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :workshops
   get 'pages/test'
   resources :studios
 

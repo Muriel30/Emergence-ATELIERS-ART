@@ -17,7 +17,7 @@ categories = [
 ]
 
 categories.each do |c|
-  Category.create!(name: c)
+  ArtistCategory.create!(name: c)
   print "."
 end
 

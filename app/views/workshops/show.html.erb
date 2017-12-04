@@ -1,0 +1,76 @@
+<div class="subtitle">
+  <div class="workshop media">
+    <div class="media-body">
+      <h1 class="workshop-title">
+        <%= @workshop.name %>
+      </h1>
+      <p class="workshop-caption"><%= @workshop.description %></p>
+    </div>
+    <div class="media-right">
+      <div class="workshop-meta">
+        <span class="workshop-category label label-default">
+          <%#= @workshop.category.name %>
+        </span>
+
+        <%#=<div class="stars-count poi-rating">
+          <%#= @workshop.reviews.average(:rating).to_i.times do %>
+            <%#=<i class="fa fa-star" aria-hidden="true" style="color: #F29918;"></i>
+          <% end %>
+          <%#=<% (5 - @workshop.reviews.average(:rating).to_i).times do %>
+            <%#=<i class="fa fa-star-o" aria-hidden="true"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7">
+      <%#=<div class="reviews">
+        <h2 id="review-count">
+          <%= pluralize @workshop.reviews.size, "review" %>
+        </h2>
+
+        <%#=<div id="reviews">
+          <% if @workshop.reviews.blank? %>
+            Soyez le premier à laisser un commentaire pour <%= @workshop.name %>
+          <%#=<% else %>
+            <%#=<% @workshop.reviews.each do |review| %>
+              <%#=<%= render 'reviews/show', review: review %>
+            <%#=<% end %>
+          <%#=<% end %>
+        </div>
+
+        <%#=<%= render 'reviews/form', workshop: @workshop, review: @review %>
+      </div>
+    </div>
+
+    <div class="col-sm-5">
+      <div id="map" class="poi-map" style="width: 100%; height: 400px;"></div>
+    </div>
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Nom de l'atelier :</strong>
+  <%= @workshop.name %>
+</p>
+<p>
+  <strong>Addresse :</strong>
+  <%= @workshop.address %>
+</p>
+<p>
+  <strong>Description :</strong>
+  <%= @workshop.description %>
+</p>
+<p>
+  <strong>Modalités d'ouverture :</strong>
+  <%= @workshop.openings %>
+</p>
+
+
+<%# %= link_to 'Edit', edit_workshop_path(@poi) %> |
+<%# <%= link_to 'Back', workshops_path %>
