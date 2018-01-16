@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  has_many :pois, dependent: :destroy
+  has_many :workshops, dependent: :destroy
 end
 
 class ArtistCategory < Category

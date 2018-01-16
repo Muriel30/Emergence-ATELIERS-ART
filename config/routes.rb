@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :workshops
   get 'pages/test'
+
   resources :studios
 
   ActiveAdmin.routes(self)
@@ -9,7 +10,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-
 
   resources :pois do
     resources :reviews

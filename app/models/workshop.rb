@@ -6,7 +6,6 @@ class Workshop < ApplicationRecord
 
   has_attachment :photo
 
-
   #after_create :send_welcome_email
 
   #private

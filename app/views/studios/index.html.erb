@@ -3,7 +3,7 @@
     <div class="subtitle">
       <ul class="filters list-inline">
         <li data-filter="all" class="label label-default"> Tous </li>
-          <% ArtisanCategory.all.each do |artisancategory| %>
+          <% Artisancategory.all.each do |artisancategory| %>
          <li data-filter="<%= artisancategory.id %>" class="label label-default"> <%= artisancategory.name.capitalize %> </li>
         <% end %>
       </ul>

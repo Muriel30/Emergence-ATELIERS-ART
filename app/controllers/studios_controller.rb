@@ -1,6 +1,9 @@
 class StudiosController < InheritedResources::Base
+  before_action :find_studio, except: [:index , :new , :create]
+
 def index
-    @studios = Studio.all
+
+    @studios = Studio.joins(:user).where(users: {user_type: current_user.user_type})
   end
 
   def show
@@ -44,7 +47,7 @@ def index
   private
 
     def studio_params
-      params.require(:studio).permit(:name, :address, :description, :openings, :stars)
+      params.require(:studio).permit(:name, :address, :description, :openings, :stars, :artisancategory_id, :photo)
     end
 end
 

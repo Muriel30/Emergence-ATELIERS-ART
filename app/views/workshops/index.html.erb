@@ -12,7 +12,7 @@
     <div class="workshops">
       <div class="workshops-list", background-repeat: no-repeat>
        <div class="container-fluid">
-          <div class="filtr-container row">-%>
+          <div class="filtr-container row">
             <% @workshops.each do |workshop| %>
               <div class="filtr-item col-sm-4" data-category="<%= workshop.category.id %>" data-sort="value">
                 <%= render "workshop", workshop: workshop %>
@@ -21,7 +21,7 @@
           </div>
         </div>
 
-      <%#= @workshops.each do |poi| %>
+      <%#=@workshops.each do |poi| %>
       <%#=<tr>
         <td><%= workshop.name %></td>
         <%#=<td><%= workshop.address %></td>

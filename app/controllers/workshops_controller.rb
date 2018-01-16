@@ -1,9 +1,10 @@
 class WorkshopsController < InheritedResources::Base
-before_action :find_workshop, except: [:index]
-
+before_action :find_workshop, except: [:new , :create]
 
   def index
-    @workshops = Workshop.all
+
+    @workshops = Workshop.joins(:user).where(users: {user_type: current_user.user_type})
+
   end
 
   def show
@@ -16,6 +17,7 @@ before_action :find_workshop, except: [:index]
   end
 
   def edit
+    @workshop = Workshop.find(params[:id])
   end
 
  def create
@@ -28,14 +30,11 @@ before_action :find_workshop, except: [:index]
     end
   end
 
-
   def update
       if @workshop.update(workshop_params)
         redirect_to @workshop, notice: 'L atelier a été mis à jour avec succès.'
-
       else
        render :edit
-
       end
     end
 
@@ -43,15 +42,13 @@ before_action :find_workshop, except: [:index]
     @workshop.destroy
 
     redirect_to workshops_url, notice: 'Workshop was successfully destroyed.'
-
   end
 
   private
 
- def find_workshop
+  def find_workshop
     @workshop = Workshop.find(params[:id])
   end
-
 
   private
 

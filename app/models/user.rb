@@ -3,15 +3,16 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  has_many :workshops
+  has_many :reviews
 
-has_many :pois
-has_many :reviews
+  enum user_type: [:artist , :artisan]
 
- #after_create :send_welcome_email
+  #after_create :send_welcome_email
 
-def name
-  email
-end
+  def name
+    email
+  end
 
   private
 
