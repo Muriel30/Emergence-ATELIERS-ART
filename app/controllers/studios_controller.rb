@@ -1,5 +1,5 @@
 class StudiosController < InheritedResources::Base
-  before_action :find_studio, except: [:index , :new , :create]
+  #before_action :find_studio, except: [:index , :new , :create]
 
 def index
 
