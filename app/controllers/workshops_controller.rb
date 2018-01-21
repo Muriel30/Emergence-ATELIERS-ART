@@ -1,10 +1,11 @@
 class WorkshopsController < InheritedResources::Base
-before_action :find_workshop, except: [:new , :create]
+#before_action :find_workshop, except: [:new , :create]
 
   def index
 
-    @workshops = Workshop.joins(:user).where(users: {user_type: current_user.user_type})
+    #@workshops = Workshop.joins(:user).where(users: {user_type: current_user.user_type})
 
+@workshops = Workshop.all
   end
 
   def show
@@ -46,9 +47,9 @@ before_action :find_workshop, except: [:new , :create]
 
   private
 
-  def find_workshop
-    @workshop = Workshop.find(params[:id])
-  end
+  #def find_workshop
+    #@workshop = Workshop.find(params[:id])
+  #end
 
   private
 

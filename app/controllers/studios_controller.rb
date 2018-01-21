@@ -2,8 +2,8 @@ class StudiosController < InheritedResources::Base
   #before_action :find_studio, except: [:index , :new , :create]
 
 def index
-
-    @studios = Studio.joins(:user).where(users: {user_type: current_user.user_type})
+    #@studios = Studio.joins(:user).where(users: {user_type: current_user.user_type})
+  @studios = STUDIOS.all
   end
 
   def show

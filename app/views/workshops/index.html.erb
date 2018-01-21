@@ -14,7 +14,7 @@
        <div class="container-fluid">
           <div class="filtr-container row">
             <% @workshops.each do |workshop| %>
-              <div class="filtr-item col-sm-4" data-category="<%= workshop.category.id %>" data-sort="value">
+
                 <%= render "workshop", workshop: workshop %>
               </div>
               <% end %>

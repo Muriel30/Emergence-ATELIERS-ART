@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :workshops
   has_many :reviews
 
-  enum user_type: [:artist , :artisan]
+  #enum user_type: [:artist , :artisan]
 
   #after_create :send_welcome_email
 
